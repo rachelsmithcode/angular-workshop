@@ -5,7 +5,15 @@
     <title>Your title</title>
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers/controller.js"></script>
   </head>
   <body>
+    <main>
+      <section ng-controller='counterController as counter'>
+        <button ng-click="counter.increment()">+</button>
+          Count: {{counter.count()}}
+        <button ng-click="counter.decrement()">-</button>
+      </section>
+    </main>
   </body>
 </html>
